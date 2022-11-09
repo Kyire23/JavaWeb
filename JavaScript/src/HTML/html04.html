@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+<div id="box" style="width: 100px;height: 100px;background: red;position: absolute;"></div>
+
+<!-- 在这里写JavaScript代码，因为JavaScript是由上到下执行的 -->
+<script>
+    var box = document.getElementById("box");
+
+    //为document绑定一个按键按下的事件
+    document.onkeydown = function (event) {
+        event = event || window.event;
+
+        // 定义移动速度
+        var speed = 10;
+
+        // 选择移动方向
+        switch (event.keyCode) {
+            case 37:
+                box.style.left = box.offsetLeft - speed + "px";
+                break;
+            case 39:
+                box.style.left = box.offsetLeft + speed + "px";
+                break;
+            case 38:
+                box.style.top = box.offsetTop - speed + "px";
+                break;
+            case 40:
+                box.style.top = box.offsetTop + speed + "px";
+                break;
+        }
+    };
+</script>
+</body>
+</html>

@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>ajax 搜索联想 自动补全</title>
+    <style>
+        .userInput {
+            width: 300px;
+            height: 25px;
+            font-size: 20px;
+            padding-left: 5px;
+        }
+
+        .showDataDiv {
+            width: 309px;
+            border: 1px solid lightgray;
+            background-color: antiquewhite;
+            display: none;
+        }
+
+        .showDataDiv p {
+            padding-left: 5px;
+            margin-top: 2px;
+            margin-bottom: 2px;
+        }
+
+        .showDataDiv p:hover {
+            cursor: pointer;
+            border: 1px blue solid;
+            background-color: aliceblue;
+        }
+    </style>
+</head>
+<body>
+<script type="text/javascript">
+    window.onload = () => {
+        document.getElementById("keywords").onkeyup = function () {
+            if (this.value == "") {
+                document.getElementById("mydiv").style.display = "none"
+            } else {
+                //发送ajax请求
+                const xmlHttpRequest = new XMLHttpRequest();
+                xmlHttpRequest.onreadystatechange = () => {
+                    if (xmlHttpRequest.readyState == 4) {
+                        if (xmlHttpRequest.status >= 200 && xmlHttpRequest.status < 300) {
+                            const json = JSON.parse(xmlHttpRequest.responseText);
+
+                            let html = ""
+                            for (let i = 0; i < json.length; i++) {
+                                html += "<p onclick='setInput(\""+json[i].content+"\")'>" + json[i].content + "<p>"
+                            }
+                            document.getElementById("mydiv").innerHTML = html
+                            document.getElementById("mydiv").style.display = "block"
+                        }
+                    }
+                }
+                xmlHttpRequest.open("GET", "/AjaxAutoComplete/query?_=" + new Date().getTime() + "&keywords="+this.value, true)
+                xmlHttpRequest.send()
+            }
+
+        }
+
+    }
+
+    function setInput(content){
+        document.getElementById("keywords").value = content;
+        document.getElementById("mydiv").style.display = "none"
+
+    }
+</script>
+<input type="text" class="userInput" id="keywords">
+<div id="mydiv" class="showDataDiv">
+    <!--    <p>新乡疫情最新情况</p>-->
+    <!--    <p>新乡天气</p>-->
+    <!--    <p>新乡时间</p>-->
+    <!--    <p>新乡怎么样</p>-->
+</div>
+</body>
+</html>

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/AjaxAutoComplete/AjaxAutoComplete.iml" filepath="$PROJECT_DIR$/AjaxAutoComplete/AjaxAutoComplete.iml" />
+      <module fileurl="file://$PROJECT_DIR$/JQuery/JQuery.iml" filepath="$PROJECT_DIR$/JQuery/JQuery.iml" />
+      <module fileurl="file://$PROJECT_DIR$/JSP/JSP.iml" filepath="$PROJECT_DIR$/JSP/JSP.iml" />
+      <module fileurl="file://$PROJECT_DIR$/JavaScript/JavaScript.iml" filepath="$PROJECT_DIR$/JavaScript/JavaScript.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Library_OA/Library_OA.iml" filepath="$PROJECT_DIR$/Library_OA/Library_OA.iml" />
+      <module fileurl="file://$PROJECT_DIR$/ajax/ajax.iml" filepath="$PROJECT_DIR$/ajax/ajax.iml" />
+      <module fileurl="file://$PROJECT_DIR$/cookie/cookie.iml" filepath="$PROJECT_DIR$/cookie/cookie.iml" />
+      <module fileurl="file://$PROJECT_DIR$/oa/oa.iml" filepath="$PROJECT_DIR$/oa/oa.iml" />
+      <module fileurl="file://$PROJECT_DIR$/oa03/oa03.iml" filepath="$PROJECT_DIR$/oa03/oa03.iml" />
+      <module fileurl="file://$PROJECT_DIR$/oa2/oa2.iml" filepath="$PROJECT_DIR$/oa2/oa2.iml" />
+      <module fileurl="file://$PROJECT_DIR$/servlet01/servlet01.iml" filepath="$PROJECT_DIR$/servlet01/servlet01.iml" />
+      <module fileurl="file://$PROJECT_DIR$/servlet02/servlet02.iml" filepath="$PROJECT_DIR$/servlet02/servlet02.iml" />
+      <module fileurl="file://$PROJECT_DIR$/servlet03/servlet03.iml" filepath="$PROJECT_DIR$/servlet03/servlet03.iml" />
+      <module fileurl="file://$PROJECT_DIR$/session/session.iml" filepath="$PROJECT_DIR$/session/session.iml" />
+    </modules>
+  </component>
+</project>
